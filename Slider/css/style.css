@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(194, 225, 225, 0.834);
+}
+.slider{
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.button-wrapper{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+}
+.prev{
+    margin-left: 30px;
+}
+.nav-buttons{
+    background-color: rgba(218, 217, 217, 0.555);
+    border-radius: 50%;
+    padding: 15px 20px;
+    z-index: 999;
+    transition: .2s ease-in-out;
+}
+.prev:hover{
+    transform: scale(0.8);
+}
+.next{
+    margin-right: 30px;
+}
+.next:hover{
+    transform: scale(0.8);
+}
+
+.image img{
+    width: 100%;
+    object-fit: contain;
+}
+.active{
+    display: block;
+    animation: SlidetoSlide;
+    animation-duration: 1s;
+}
+.hidden{
+    display: none;
+}
+
+@keyframes SlidetoSlide{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
